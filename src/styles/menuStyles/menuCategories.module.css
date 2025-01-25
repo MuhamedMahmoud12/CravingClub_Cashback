@@ -1,0 +1,183 @@
+.mt-15 {
+  margin-top: 15px !important;
+}
+.fs-15 {
+  font-size: 15px !important;
+}
+.fixed-ul {
+  position: fixed;
+  background: url("../imgs/main-bg/header-bg.png") no-repeat center center;
+}
+.active-menu-link {
+  color: var(--primary-color) !important;
+}
+.addOne-container {
+  flex-direction: column !important;
+}
+.addOne-span {
+  font-size: 18px !important;
+  display: block;
+}
+section.slider-section {
+  margin-top: 0;
+}
+/************* Menu Section **********************/
+
+.menu {
+  background: url("../../assets/main-bg/light_bg.png") no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+/************* Menu Section **********************/
+
+/************* Appetizers Section **********************/
+.item-section {
+  background: url("../../assets/main-bg/light_bg.png");
+  background-size: cover;
+  background-attachment: fixed;
+}
+.item-section .items-container {
+  padding: 80px 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.item-section .items-container .item-grid {
+  margin: 40px 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.item-section .items-container .item-grid .img,
+.item-section .items-container .item-grid .text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.item-section .items-container .item-grid .img {
+  margin-bottom: 20px;
+}
+
+.item-section .items-container .item-grid .img > div img {
+  max-width: 100%;
+  display: block;
+  height: 350px;
+}
+.item-section .items-container .item-grid .text {
+  font-family: var(--font-bebas);
+  text-align: center;
+  color: var(--white-color);
+  width: 100%;
+}
+.item-section .items-container .item-grid .text h3 {
+  font-size: 40px;
+  color: var(--primary-color);
+  border-bottom: 1px solid var(--primary-color);
+  margin-bottom: 10px;
+  width: 70%;
+  margin: 10px auto;
+  font-weight: normal;
+  letter-spacing: 1px;
+}
+.item-section .items-container .item-grid .text span.cat {
+  display: block;
+  color: var(--primary-color);
+  margin-top: 15px;
+  font-size: 18px;
+}
+
+.item-section .items-container .item-grid .text p {
+  font-family: var(--font-roboto);
+  font-size: 18px;
+  line-height: 1.4;
+  width: 90%;
+  margin: 0 auto;
+  font-weight: 500;
+  color: var(--secondary-color);
+}
+.item-section .items-container .item-grid .text .price-cal {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  width: 80%;
+  margin: 10px auto;
+}
+.item-section .items-container .item-grid .text .price-cal span {
+  font-size: 30px;
+  letter-spacing: 1px;
+}
+.item-section .items-container .item-grid .text .price-cal span.price {
+  color: var(--secondary-color);
+}
+.item-section .items-container .item-grid .text .price-cal span.cal {
+  color: var(--primary-color);
+}
+/* Additional Changes */
+.item-section
+  .items-container
+  .item-grid
+  .text
+  .price-cal
+  span.addittional-span {
+  font-size: 22px !important;
+}
+.addition-span {
+  font-size: 18px !important;
+}
+.column-flex {
+  flex-direction: column !important;
+}
+/* Additional Changes */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .item-section .items-container {
+    gap: 30px;
+  }
+  .item-section .items-container .item-grid {
+    margin: 20px 0;
+  }
+  .item-section .items-container .item-grid .text h3 {
+    font-size: 25px;
+    width: 100%;
+  }
+  .item-section .items-container .item-grid .text p {
+    font-size: 14px;
+  }
+  .item-section .items-container .item-grid .text .price-cal span {
+    font-size: 20px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .item-section .items-container {
+    grid-template-columns: 1fr;
+  }
+}
+.item-section .items-container .item-grid {
+  margin: 10px 0;
+}
+@media only screen and (max-width: 575px) {
+  .item-section .items-container .item-grid {
+    padding: 15px;
+  }
+  .item-section .items-container .item-grid .text h3 {
+    font-size: 30px;
+    width: 90%;
+  }
+  .item-section .items-container .item-grid .img > div img {
+    height: 300px;
+  }
+}
+/************* Appetizers Section **********************/
+
+/************* soup&salad Section **********************/
+
+.soup-salad-section .items-container .item-grid .text,
+.burger-section .items-container .item-grid .text,
+.pizza-section .items-container .item-grid .text,
+.wagyu-section .items-container .item-grid .text,
+.chicken-section .items-container .item-grid .text,
+.dessert-section .items-container .item-grid .text {
+  color: var(--secondary-color);
+}
+
+/************* soup&salad  Section **********************/

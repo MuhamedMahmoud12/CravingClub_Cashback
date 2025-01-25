@@ -1,0 +1,175 @@
+/******************************* Footer *******************************/
+footer {
+  padding: 50px 0;
+  background: url("../assets/main-bg/header-bg.png") no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+  color: var(--white-color);
+}
+footer .location {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 0;
+  border-bottom: 1px solid var(--grey-color);
+}
+footer .location > div {
+  width: 50%;
+}
+footer .location p {
+  font-size: 35px;
+  font-family: var(--font-roboto);
+}
+footer .location p > span.branch {
+  color: var(--primary-color);
+  font-family: var(--font-bebas);
+}
+footer .location a {
+  display: block;
+  color: var(--primary-color);
+  font-family: var(--font-bebas);
+  font-size: 20px;
+  margin-top: 20px;
+}
+footer .location > div:nth-of-type(2) {
+  text-align: right;
+}
+footer .location span.times {
+  display: block;
+  margin-bottom: 10px;
+  font-family: var(--font-roboto);
+}
+footer .location a.reservation {
+  background: var(--primary-color);
+  color: var(--white-color);
+  width: 150px;
+  padding: 10px;
+  margin-left: auto;
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 40px;
+}
+footer .prime-links {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 0;
+  border-bottom: 1px solid var(--grey-color);
+}
+footer .prime-links .prime-club-section h2 {
+  font-size: 50px;
+  font-family: var(--font-bebas);
+  font-weight: normal;
+}
+footer .prime-links .prime-club-section p {
+  font-size: 20px;
+  font-family: var(--font-roboto);
+}
+footer .prime-links .prime-club-section a {
+  background: var(--primary-color);
+  color: var(--white-color);
+  display: inline-block;
+  width: 150px;
+  padding: 10px 0;
+  border-radius: 7px;
+  text-align: center;
+  font-family: var(--font-bebas);
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  margin: 20px 0;
+}
+footer .prime-links .social-links-section ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+footer .prime-links .social-links-section ul li a {
+  display: inline-block;
+  color: var(--white-color);
+  margin: 7px 0;
+  font-family: var(--font-roboto);
+}
+footer .footer-nav-links {
+  padding: 50px 0;
+  border-bottom: 1px solid var(--grey-color);
+}
+footer .footer-nav-links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  font-family: var(--font-bebas);
+  font-size: 20px;
+}
+footer .footer-nav-links ul li {
+  margin: 0 20px;
+}
+footer .footer-nav-links ul li a {
+  color: var(--white-color);
+  letter-spacing: 0.5px;
+}
+footer .copyrights {
+  text-align: center;
+  font-size: 22px;
+  padding: 50px 0;
+  font-family: var(--font-bebas);
+}
+
+@media only screen and (max-width: 767px) {
+  footer {
+    padding: 30px 0;
+  }
+  footer .location {
+    display: block;
+  }
+  footer .location > div {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+  }
+  footer .location p {
+    font-size: 25px;
+  }
+  footer .location p span {
+    display: block;
+    margin: 15px 0 0;
+  }
+  /* footer .location > div:firs */
+  footer .location > div:nth-child(2) {
+    text-align: center;
+    margin-top: 30px;
+  }
+  footer .location a.reservation {
+    margin: 30px auto;
+  }
+  footer .prime-links {
+    display: block;
+    text-align: center;
+  }
+  footer .prime-links .prime-club-section h2 {
+    font-size: 40px;
+  }
+  footer .prime-links .prime-club-section p {
+    font-size: 15px;
+  }
+  footer .prime-links .social-links-section ul {
+    margin: 20px 0;
+  }
+  footer .prime-links .social-links-section ul li {
+    display: inline-block;
+    margin: 0 10px;
+  }
+  footer .prime-links .social-links-section ul li a {
+    font-size: 15px;
+  }
+  footer .footer-nav-links ul li {
+    margin: 0 10px;
+  }
+  footer .footer-nav-links ul li a {
+    font-size: 18px;
+  }
+  footer .copyrights {
+    font-size: 16px;
+    padding: 20px;
+  }
+}
+/******************************* Footer *******************************/

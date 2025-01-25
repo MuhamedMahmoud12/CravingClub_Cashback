@@ -1,0 +1,15 @@
+span.prev-title {
+  font-family: var(--font-playball);
+  color: var(--primary-color);
+  display: block;
+  text-align: center;
+  font-size: 30px;
+}
+.fixed {
+  position: fixed;
+}
+@media only screen and (max-width: 575px) {
+  span.prev-title {
+    font-size: 20px;
+  }
+}

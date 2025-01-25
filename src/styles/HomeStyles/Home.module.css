@@ -1,0 +1,87 @@
+section.slider-section {
+  min-height: 900px;
+  padding: 50px 0 0 0;
+  background: url("../../assets/main-bg/header-bg.png") no-repeat fixed center;
+  background-size: cover;
+  position: relative;
+  font-family: var(--font-bebas);
+}
+section.slider-section
+  .main-img-slider
+  .owl-carousel
+  .owl-item.active
+  .slider-content {
+  animation: fadeInUp;
+  animation-duration: 1500ms;
+}
+section.slider-section .left-side-div,
+section.slider-section .right-side-div {
+  position: absolute;
+  color: var(--grey-color);
+  font-family: var(--font-roboto);
+  transform: rotate(-90deg);
+  top: 300px;
+}
+section.slider-section .left-side-div {
+  left: -150px;
+}
+section.slider-section .right-side-div {
+  right: -130px;
+}
+section.slider-section .left-side-div ul li {
+  display: inline-block;
+}
+section.slider-section .left-side-div ul li a {
+  color: var(--grey-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 300ms;
+}
+section.slider-section .left-side-div ul li a:hover {
+  color: var(--primary-color);
+}
+section.slider-section .left-side-div ul li a:not(.last-link)::after {
+  content: "";
+  display: inline-block;
+  width: 25px;
+  height: 0.5px;
+  margin: 0 8px 0 10px;
+  background-color: var(--grey-color);
+}
+section.slider-section .right-side-div ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section.slider-section .right-side-div ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section.slider-section .right-side-div ul li:first-of-type::after {
+  content: "";
+  width: 40px;
+  height: 0.5px;
+  margin: 0 5px;
+  display: inline-block;
+  background-color: var(--grey-color);
+}
+@media only screen and (max-width: 576px) {
+  section.slider-section {
+    min-height: 550px;
+  }
+  section.slider-section .left-side-div,
+  section.slider-section .right-side-div {
+    display: none;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  section.slider-section {
+    min-height: 550px;
+  }
+  section.slider-section .left-side-div,
+  section.slider-section .right-side-div {
+    display: none;
+  }
+}

@@ -1,0 +1,136 @@
+section.prime-club {
+  background: url("../../assets/prime-club.jpg") no-repeat fixed center center;
+  background-size: cover;
+  position: relative;
+  font-family: var(--font-bebas);
+}
+section.prime-club .overlay {
+  width: 100%;
+  height: 100%;
+  padding: 100px 0;
+  background: rgb(0, 0, 0, 0.7);
+}
+section.prime-club .prime-club-container {
+  background: url("../../assets/main-bg/header-bg.png") no-repeat center;
+  background-size: cover;
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  justify-content: center;
+  gap: 40px;
+  padding: 40px;
+  border-radius: 15px;
+}
+
+section.prime-club .prime-club-container .form h2 {
+  font-size: 50px;
+  color: var(--white-color);
+  text-align: center;
+}
+section.prime-club .prime-club-container .form h2 span {
+  color: var(--primary-color);
+}
+section.prime-club .prime-club-container .form p {
+  color: var(--grey-color);
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+section.prime-club .prime-club-container .form > div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+section.prime-club .prime-club-container .form input {
+  display: block;
+  width: 100%;
+  height: 55px;
+  border: 2px solid var(--grey-color);
+  border-radius: 10px;
+  font-weight: 500;
+  background-color: #222;
+  color: var(--white-color);
+  padding: 0 10px;
+  margin-bottom: 15px;
+}
+
+section.prime-club .prime-club-container .form input::placeholder {
+  color: var(--white-color);
+  font-family: var(--font-bebas);
+}
+section.prime-club .prime-club-container .submit-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+section.prime-club .prime-club-container .form button {
+  font-family: var(--font-bebas);
+  background: var(--primary-color);
+  color: var(--white-color);
+  text-align: center;
+  font-size: 22px;
+  padding: 15px;
+  border-radius: 2px;
+  cursor: pointer;
+  padding: 8px 20px;
+  border: none;
+  letter-spacing: 0.5px;
+  margin: 10px 0;
+}
+
+.signin-btn {
+  color: #fff;
+  text-decoration: underline;
+  font-size: 20px;
+}
+section.prime-club .prime-club-container .contact .contact-container {
+  width: 100%;
+  margin: auto;
+  border: 2px solid var(--grey-color);
+  text-align: center;
+  padding: 20px;
+  border-radius: 20px;
+  /* height: 100%; */
+}
+section.prime-club .prime-club-container .contact .contact-container h2 {
+  color: var(--primary-color);
+  font-size: 50px;
+}
+section.prime-club .prime-club-container .contact .contact-container > div {
+  color: var(--white-color);
+  margin-bottom: 20px;
+}
+section.prime-club .prime-club-container .contact .contact-container > div h3 {
+  font-weight: normal;
+  font-size: 30px;
+  margin-top: 10px;
+}
+section.prime-club
+  .prime-club-container
+  .contact
+  .contact-container
+  > div
+  span {
+  color: var(--grey-color);
+  display: block;
+  font-family: var(--font-roboto);
+  margin-bottom: 3px;
+}
+@media only screen and (max-width: 767px) {
+  section.prime-club .prime-club-container {
+    display: block;
+  }
+  section.prime-club .prime-club-container .form {
+    margin-bottom: 20px;
+  }
+  section.prime-club .prime-club-container .form h2 {
+    font-size: 46px;
+  }
+  section.prime-club .prime-club-container .form P {
+    font-size: 16px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  section.prime-club .prime-club-container {
+    grid-template-columns: 1fr 250px;
+  }
+}
