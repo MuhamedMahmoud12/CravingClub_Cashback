@@ -40,6 +40,34 @@ section.prime-club .prime-club-container .form > div {
   grid-template-columns: 1fr 1fr;
   gap: 20px;
 }
+section.prime-club .prime-club-container .form select {
+  background-color: #222;
+  display: block;
+  width: 100px;
+  height: 55px;
+  border: 2px solid var(--grey-color);
+  border-radius: 10px;
+  font-weight: 500;
+  background-color: #222;
+  color: var(--white-color);
+  padding: 10px;
+  margin: 0 10px 15px 0;
+  cursor: pointer;
+  font-family: var(--font-bebas);
+  font-size: 18px;
+}
+section.prime-club .prime-club-container .form .inputs-container {
+  display: flex;
+  justify-content: baseline;
+}
+section.prime-club .prime-club-container .form label {
+  color: var(--white-color);
+  font-size: 18px;
+  padding-left: 3px;
+  margin-bottom: 3px;
+  display: inline-block;
+  letter-spacing: 0.5px;
+}
 section.prime-club .prime-club-container .form input {
   display: block;
   width: 100%;
@@ -53,10 +81,6 @@ section.prime-club .prime-club-container .form input {
   margin-bottom: 15px;
 }
 
-section.prime-club .prime-club-container .form input::placeholder {
-  color: var(--white-color);
-  font-family: var(--font-bebas);
-}
 section.prime-club .prime-club-container .submit-container {
   display: flex;
   justify-content: space-between;
@@ -65,18 +89,38 @@ section.prime-club .prime-club-container .submit-container {
 section.prime-club .prime-club-container .form button {
   font-family: var(--font-bebas);
   background: var(--primary-color);
-  color: var(--white-color);
+  color: var(--secondary-color);
+  border: 2px solid var(--secondary-color);
   text-align: center;
-  font-size: 22px;
+  font-size: 20px;
   padding: 15px;
-  border-radius: 2px;
+  border-radius: 10px;
   cursor: pointer;
   padding: 8px 20px;
   border: none;
   letter-spacing: 0.5px;
-  margin: 10px 0;
+  margin: 10px auto;
+  width: 50%;
+  height: 55px;
+  border: 2px solid;
 }
-
+section.prime-club .prime-club-container .steps {
+  color: var(--white-color);
+  margin-top: 20px;
+}
+section.prime-club .prime-club-container .steps h3 {
+  font-size: 35px;
+  font-weight: normal;
+  margin: 0;
+}
+section.prime-club .prime-club-container .steps ol {
+  padding-left: 20px;
+  font-size: 25px;
+  line-height: 1.8;
+}
+section.prime-club .prime-club-container .steps span.mark {
+  color: var(--primary-color);
+}
 .signin-btn {
   color: #fff;
   text-decoration: underline;
@@ -89,11 +133,17 @@ section.prime-club .prime-club-container .contact .contact-container {
   text-align: center;
   padding: 20px;
   border-radius: 20px;
-  /* height: 100%; */
 }
 section.prime-club .prime-club-container .contact .contact-container h2 {
   color: var(--primary-color);
   font-size: 50px;
+}
+section.prime-club
+  .prime-club-container
+  .contact
+  .contact-container
+  .booking-details-container {
+  display: flex;
 }
 section.prime-club .prime-club-container .contact .contact-container > div {
   color: var(--white-color);

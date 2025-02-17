@@ -1,39 +1,27 @@
-// /* eslint-disable react/prop-types */
-// import { createContext, useState, useEffect } from "react";
-// import axiosInstance from "../api/axios";
+import { createContext, useState, useContext } from "react";
 
-// export const AuthContext = createContext();
-// const AuthProvider = ({ children }) => {
-//   const [accessToken, setAccessToken] = useState("");
+const AuthContext = createContext(null);
 
-//   // Function to refresh the access token
-//   const refreshAccessToken = async () => {
-//     try {
-//       const response = await axiosInstance.post("/refresh-token");
-//       setAccessToken(response.data.accessToken);
-//     } catch (error) {
-//       console.error("Failed to refresh access token:", error);
-//       setAccessToken(""); // Log the user out on failure
-//     }
-//   };
+// eslint-disable-next-line react/prop-types
+export const AuthProvider = ({ children }) => {
+  const [token, setToken] = useState(localStorage.getItem("token"));
 
-//   useEffect(() => {
-//     if (!accessToken) return;
+  const login = (newToken) => {
+    localStorage.setItem("token", newToken);
+    setToken(newToken);
+  };
 
-//     const refreshInterval = setInterval(() => {
-//       refreshAccessToken();
-//     }, 14 * 60 * 1000); // Refresh every 14 minutes (just before the 15-minute expiry)
+  const logout = () => {
+    localStorage.removeItem("token");
+    setToken(null);
+  };
 
-//     return () => clearInterval(refreshInterval); // Cleanup on unmount
-//   }, [accessToken]);
+  return (
+    <AuthContext.Provider value={{ token, login, logout }}>
+      {children}
+    </AuthContext.Provider>
+  );
+};
 
-//   return (
-//     <AuthContext.Provider
-//       value={{ accessToken, setAccessToken, refreshAccessToken }}
-//     >
-//       {children}
-//     </AuthContext.Provider>
-//   );
-// };
-
-// export default AuthProvider;
+// eslint-disable-next-line react-refresh/only-export-components
+export const useAuth = () => useContext(AuthContext);

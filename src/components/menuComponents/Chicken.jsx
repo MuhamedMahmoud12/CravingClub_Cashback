@@ -14,7 +14,7 @@ export default function Chicken({ categoryStyle }) {
       >
         <AutoSlider
           properties={SLIDER_OPTIONS[0].homeAutoSlider}
-          titles={AUTO_SLIDER_TITLES.chicken}
+          titles={AUTO_SLIDER_TITLES.chickenTitles}
         />
         <div className="container">
           <div className={categoryStyle["items-container"]}>

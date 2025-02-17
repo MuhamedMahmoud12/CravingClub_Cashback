@@ -1,8 +1,6 @@
 import Home from "./pages/Home";
-import PrimeClub from "./components/homeComponents/SignUp.jsx";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./layouts/MainLayout";
-
 import MenuLayout from "./layouts/menuLayout.jsx";
 import Appetizers from "./components/menuComponents/Appetizers.jsx";
 import SoupAndSalad from "./components/menuComponents/SoupAndSalad.jsx";
@@ -17,11 +15,15 @@ import Chicken from "./components/menuComponents/Chicken.jsx";
 import KidsMeal from "./components/menuComponents/KidsMeal.jsx";
 import Dessert from "./components/menuComponents/Dessert.jsx";
 import menuCategories from "./styles/menuStyles/menuCategories.module.css";
-
+import CravingLunch from "./pages/CravingLunch.jsx";
 // eslint-disable-next-line no-unused-vars
 import * as $ from "jquery";
 import SignIn from "./components/homeComponents/SignIn.jsx";
+import UserProfile from "./components/homeComponents/UserProfile.jsx";
+import { useAuth } from "./context/AuthContext.jsx";
 function App() {
+  const { token } = useAuth();
+
   return (
     <BrowserRouter>
       <Routes>
@@ -77,8 +79,13 @@ function App() {
               element={<Dessert categoryStyle={menuCategories} />}
             />
           </Route>
-          <Route path="/sign-up" element={<PrimeClub />} />
-          <Route path="/sign-in" element={<SignIn />} />
+          {token ? (
+            <Route path="/sign-in" element={<UserProfile />} />
+          ) : (
+            <Route path="/sign-in" element={<SignIn />} />
+          )}
+          <Route path="/profile" element={<UserProfile />} />
+          <Route index path="/craving-lunch" element={<CravingLunch />} />
         </Route>
       </Routes>
     </BrowserRouter>

@@ -1,0 +1,100 @@
+.user-profile {
+  background: url("../../../assets/main-bg/header-bg.png");
+  background-size: cover;
+  font-family: var(--font-bebas);
+  padding: 50px;
+}
+.terms-conditions {
+  width: 50%;
+  margin: 10px auto;
+  background: url("../../../assets/main-bg/light_bg.png");
+  border: 2px solid var(--primary-color);
+  text-align: center;
+  color: var(--secondary-color);
+  padding: 10px 0;
+  font-size: 30px;
+  border-radius: 10px;
+}
+.info-container {
+  background: url("../../../assets/main-bg/light_bg.png");
+  padding: 20px;
+  border: 2px solid var(--primary-color);
+  border-radius: 10px;
+  width: 50%;
+  margin: 0px auto;
+}
+.info-container h2 {
+  font-size: 50px;
+  color: var(--secondary-color);
+  font-weight: normal;
+  text-align: center;
+}
+.info-container h2 > span {
+  color: var(--primary-color);
+}
+.info-container p {
+  font-size: 30px;
+  text-align: center;
+  color: var(--secondary-color);
+}
+.info-container img {
+  display: block;
+  width: 150px;
+  margin: 0 auto;
+  mix-blend-mode: multiply;
+}
+
+.info-container .grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  margin: 20px 0;
+}
+.info-container .grid > p {
+  font-size: 25px;
+}
+.info-container .grid p.balance-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.info-container span.remaning-visits {
+  font-size: 40px;
+  display: inline-block;
+  width: 50px;
+  margin: 0 10px 0 0;
+  color: var(--primary-color);
+  background: var(--secondary-color);
+  padding: 4px;
+  border-radius: 5px;
+}
+
+.info-container .grid span.balance {
+  color: var(--primary-color);
+  font-size: 40px;
+  background: var(--secondary-color);
+  padding: 4px;
+  border-radius: 5px;
+  margin: 5px 0;
+}
+.info-container .grid span.validty {
+  font-size: 20px;
+  padding: 0;
+  background: transparent;
+}
+
+.info-container .logout {
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+  background: var(--primary-color);
+  padding: 5px 0;
+  border: none;
+  color: var(--white-color);
+  font-family: var(--font-bebas);
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 10px;
+}

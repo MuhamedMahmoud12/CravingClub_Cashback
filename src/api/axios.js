@@ -1,34 +1,36 @@
 import axios from "axios";
 
 const axiosInstance = axios.create({
-  baseURL: "https://cash-back-seven.vercel.app/api/v1/auth/", // Replace with your backend API URL
-  withCredentials: true, // Send cookies with every request,
+  baseURL: "https://cash-back-seven.vercel.app/api/v1/",
   headers: {
-    "x-vercel-protection-bypass": "uljGqMgQYaS2wbN96WeRPvTSoC1mMMZX",
     "Content-Type": "application/json",
   },
 });
+
+// Add a request interceptor to add the token to all requests
+axiosInstance.interceptors.request.use(
+  (config) => {
+    const token = localStorage.getItem("token");
+    if (token) {
+      config.headers.Authorization = `Bearer ${token}`;
+    }
+    return config;
+  },
+  (error) => {
+    return Promise.reject(error);
+  }
+);
+
+// Response interceptor for handling token expiration
 axiosInstance.interceptors.response.use(
   (response) => response,
   async (error) => {
-    const originalRequest = error.config;
-
-    // If the error is 401 (unauthorized) and we haven't tried refreshing yet
-    if (error.response.status === 401 && !originalRequest._retry) {
-      originalRequest._retry = true;
-
-      try {
-        // Call your refresh token endpoint
-        await axiosInstance.post("/refresh-token");
-        // Retry the original request
-        return axiosInstance(originalRequest);
-      } catch (refreshError) {
-        // If refresh fails, redirect to login
-        window.location.href = "/login";
-        return Promise.reject(refreshError);
-      }
+    if (error.response?.status === 401 || error.response?.status === 403) {
+      localStorage.removeItem("token");
+      window.location.href = "/sign-in";
     }
     return Promise.reject(error);
   }
 );
+
 export default axiosInstance;

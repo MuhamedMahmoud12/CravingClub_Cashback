@@ -16,6 +16,7 @@ export default function MenuLayout() {
         />
       </section>
       <MenuItemsNav />
+
       <Outlet />
     </div>
   );

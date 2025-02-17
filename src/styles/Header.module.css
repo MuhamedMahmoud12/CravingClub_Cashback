@@ -72,11 +72,16 @@ header ul li a.nav-reservation-link span.nav-reservation-span {
   color: var(--grey-color);
   font-size: 20px;
 }
-header ul li a.nav-primeclub-link {
+header ul li .nav-primeclub-link {
   padding: 12px 30px;
   background: var(--primary-color);
   border-radius: var(--main-border-radius);
+  border: none;
   letter-spacing: 1px;
+  color: #fff;
+  font-size: 18px;
+  font-family: var(--font-bebas);
+  cursor: pointer;
 }
 header nav.navbar .nav-links ul.nav-links-ul li a.nav-lang-link {
   display: flex;

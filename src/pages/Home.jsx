@@ -5,7 +5,7 @@ import MenuCategories from "../components/homeComponents/MenuCategories";
 import Offers from "../components/homeComponents/Offers";
 import WhoWeAre from "../components/homeComponents/WhoWeAre";
 import Testimonials from "../components/homeComponents/Testimonials";
-import PrimeClub from "../components/homeComponents/SignUp";
+import SignIn from "../components/homeComponents/SignIn.jsx";
 import home from "../styles/HomeStyles/Home.module.css";
 import aboutUs from "../styles/HomeStyles/aboutUs.module.css";
 import menuCategories from "../styles/HomeStyles/menuCategories.module.css";
@@ -59,7 +59,7 @@ export default function Home() {
       </section>
       <WhoWeAre />
       <Testimonials />
-      <PrimeClub />
+      <SignIn />
     </>
   );
 }

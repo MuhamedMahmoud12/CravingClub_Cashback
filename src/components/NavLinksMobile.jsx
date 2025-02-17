@@ -1,8 +1,11 @@
 import styles from "../styles/Header.module.css";
 import NAV_LINKS from "../data/link-routes";
+import { NavLink } from "react-router-dom";
 import { useState } from "react";
+import { useAuth } from "../context/AuthContext";
 export default function NavLinksMobile() {
   const [isVisible, setIsVisible] = useState(false);
+  const { token } = useAuth();
   return (
     <div className={styles["mobile-nav"]}>
       <div
@@ -26,29 +29,43 @@ export default function NavLinksMobile() {
           {NAV_LINKS.map((element, index) => {
             return (
               <li key={index}>
-                <a href={element.href}>{element.content}</a>
+                <NavLink href={element.href}>{element.content}</NavLink>
               </li>
             );
           })}
           <li className={styles["nav-reservation-li"]}>
-            <a href="#" className={styles["nav-reservation-link"]}>
+            <NavLink className={styles["nav-reservation-link"]}>
               <span className={styles["nav-reservation-span"]}>
                 Reservation:
               </span>
               +966 54 798 4094
-            </a>
+            </NavLink>
           </li>
           <li className={styles["nav-primeclub-li"]}>
-            <a href="sign-up" className={styles["nav-primeclub-link"]}>
-              Prime Club
-            </a>
+            {!token ? (
+              <NavLink
+                className={`${styles["nav-primeclub-link"]} ${styles["no-hover"]}`}
+                id="prime-club-btn"
+                to="/sign-up"
+              >
+                Prime Club
+              </NavLink>
+            ) : (
+              <NavLink
+                className={`${styles["nav-primeclub-link"]} ${styles["no-hover"]}`}
+                id="prime-club-btn"
+                to="/profile"
+              >
+                Profile
+              </NavLink>
+            )}
           </li>
           <li className={styles["nav-lang-li"]}>
-            <a href="#" className={styles["nav-lang-link"]}>
+            <NavLink href="#" className={styles["nav-lang-link"]}>
               Change Language : &nbsp;
               <img src="/assets/icons/ar.png" alt="arabic-language-img" />
               ARABIC
-            </a>
+            </NavLink>
           </li>
         </ul>
       </div>
